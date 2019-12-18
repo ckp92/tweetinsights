@@ -4,6 +4,7 @@ const bodyParser = require("body-parser");
 const morgan = require("morgan");
 const keys = require("./config/keys");
 const db = require("./config/DBConfig");
+require("./models/Data");
 
 // MONGOOSE CONFIG -------------------------------------------------------------------------------------------
 db.on("error", console.error.bind(console, "connection error"));
