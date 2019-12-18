@@ -1,16 +1,24 @@
 {
   "name": "twitter-data",
   "version": "1.0.0",
-  "description": "",
+  "description": "Visualise Twitter volume data to discover insights",
   "main": "index.js",
+  "engines": {
+    "node": "12.13.1",
+    "npm": "6.13.4"
+  },
   "scripts": {
-    "start": "nodemon index.js",
-    "dev": "npm run start"
+    "start": "node index.js",
+    "server": "nodemon index.js --ignore ./client",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "author": "Chintan Patel",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
+    "concurrently": "^5.0.2",
     "express": "^4.17.1",
     "mongoose": "^5.8.1",
     "morgan": "^1.9.1",

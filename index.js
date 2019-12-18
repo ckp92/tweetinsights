@@ -21,7 +21,7 @@ app.use(morgan("combined"));
 
 // ROUTES ----------------------------------------------------------------------------------------------------
 
-app.get("/", (req, res) => res.send({ hello: "World!" }));
+app.get("/api/test", (req, res) => res.send({ hello: "World!" }));
 
 // make express behave correctly in production environment
 if (process.env.NODE_ENV === "production") {
