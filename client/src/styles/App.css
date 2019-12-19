@@ -1,0 +1,20 @@
+* {
+  box-sizing: border-box;
+  color: #00264d;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.container {
+  height: 100%;
+}
+
+button {
+  cursor: pointer;
+}
