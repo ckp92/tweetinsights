@@ -1,0 +1,53 @@
+.header {
+  background-color: #1da1f2;
+  color: white;
+  padding: 5px 0;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.header-top {
+  height: 50px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.hamburger {
+  background-color: #1da1f2;
+  color: white;
+  position: absolute;
+  outline: none;
+  border: none;
+  margin: 0;
+  height: 50px;
+  width: 50px;
+}
+
+.header-top .menu-button {
+  width: 200px;
+  margin: 0 auto;
+}
+
+.header-bottom {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .header {
+    padding: 20px 0;
+  }
+
+  .header-top .menu-button {
+    width: auto;
+  }
+
+  .header-bottom {
+    display: block;
+  }
+
+  .hamburger {
+    display: none;
+  }
+}

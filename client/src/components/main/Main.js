@@ -1,3 +1,4 @@
+import "../../styles/main/Main.css";
 import React from "react";
 import Shell from "../Shell";
 
