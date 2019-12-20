@@ -1,11 +1,29 @@
 import "../../styles/header/Header.css";
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { toggleHamburger } from "../../actions";
+import { toggleHamburger, closeModal } from "../../actions";
 import BottomContent from "./BottomContent";
 import MenuButton from "./MenuButton";
+import Modal from "../Modal";
 
 class Header extends Component {
+  renderModal = () => {
+    const { emailStatus, closeModal } = this.props;
+
+    if (!emailStatus) return;
+
+    const title = emailStatus.charAt(0).toUpperCase() + emailStatus.slice(1);
+
+    let message = null;
+
+    if (emailStatus === "success") message = "Message sent successfully!";
+    else if (emailStatus === "error")
+      message =
+        "Oops - There was an error sending the message. Please try again";
+
+    return <Modal title={title} message={message} onDismiss={closeModal} />;
+  };
+
   onHamburgerClick = () => {
     const { hamburgerOn, toggleHamburger } = this.props;
 
@@ -21,6 +39,7 @@ class Header extends Component {
   render() {
     return (
       <div className="header">
+        {this.renderModal()}
         <div className="header-top">
           <button className="hamburger" onClick={this.onHamburgerClick}>
             <i className="fas fa-bars fa-2x" />
@@ -41,8 +60,10 @@ class Header extends Component {
   }
 }
 
-const mapStateToProps = ({ hamburgerOn }) => {
-  return { hamburgerOn };
+const mapStateToProps = ({ hamburgerOn, emailStatus }) => {
+  return { hamburgerOn, emailStatus };
 };
 
-export default connect(mapStateToProps, { toggleHamburger })(Header);
+export default connect(mapStateToProps, { toggleHamburger, closeModal })(
+  Header
+);

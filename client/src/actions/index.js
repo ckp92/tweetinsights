@@ -1,4 +1,9 @@
-import { TOGGLE_HAMBURGER, TOGGLE_FORM_REVIEW, SEND_EMAIL } from "./types";
+import {
+  TOGGLE_HAMBURGER,
+  TOGGLE_FORM_REVIEW,
+  SEND_EMAIL,
+  CLOSE_MODAL
+} from "./types";
 
 // toggle hamburger menu -------------------------------------------------------------------------------------
 export const toggleHamburger = value => {
@@ -19,9 +24,13 @@ export const sendEmail = (formValues, history) => async dispatch => {
   };
 
   const res = await fetch("/api/contact", options);
-  const data = await res.json;
-
-  dispatch({ type: SEND_EMAIL, payload: data });
+  const data = await res.json();
 
   history.push("/");
+  dispatch({ type: SEND_EMAIL, payload: data.status });
+};
+
+// close modal -----------------------------------------------------------------------------------------------
+export const closeModal = () => {
+  return { type: CLOSE_MODAL };
 };

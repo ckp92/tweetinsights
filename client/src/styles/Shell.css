@@ -30,3 +30,9 @@
     /* align-self: stretch; */
   }
 }
+
+@media (max-width: 640px) {
+  .shell-footer {
+    text-align: center;
+  }
+}

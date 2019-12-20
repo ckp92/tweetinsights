@@ -2,7 +2,7 @@ import "../../styles/contact/ContactFormReview.css";
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
-import { toggleFormReview } from "../../actions";
+import { toggleFormReview, sendEmail } from "../../actions";
 import formFields from "./formFields";
 import Button from "../Button";
 
@@ -30,7 +30,7 @@ class ContactFormReview extends Component {
   };
 
   render() {
-    const { toggleFormReview, formValues, history } = this.props;
+    const { sendEmail, toggleFormReview, formValues, history } = this.props;
     return (
       <div className="contact-form-review">
         <div className="review-fields">{this.renderFields()}</div>
@@ -40,7 +40,11 @@ class ContactFormReview extends Component {
             type="button"
             onClick={() => toggleFormReview(false)}
           />
-          <Button content="Send" type="button" />
+          <Button
+            content="Send"
+            type="button"
+            onClick={() => sendEmail(formValues, history)}
+          />
         </div>
       </div>
     );
@@ -51,6 +55,6 @@ const mapStateToProps = ({ form }) => {
   return { formValues: form.contactForm.values };
 };
 
-export default connect(mapStateToProps, { toggleFormReview })(
+export default connect(mapStateToProps, { toggleFormReview, sendEmail })(
   withRouter(ContactFormReview)
 );
