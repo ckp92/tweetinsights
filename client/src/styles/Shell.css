@@ -2,5 +2,31 @@
   /* border: 1px solid black; */
   margin-bottom: 20px;
   padding: 20px;
-  width: 100;
+  /* width: 100%; */
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* align-items: center; */
+}
+
+.shell-header,
+.shell-content,
+.shell-footer {
+  /* border: 1px solid black; */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.shell-header h1 {
+  margin: 0;
+}
+
+@media (min-width: 1000px) {
+  .shell {
+    /* min-width: 1000px; */
+    /* flex-grow: 2; */
+    /* align-self: stretch; */
+  }
 }

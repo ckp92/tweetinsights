@@ -6,10 +6,10 @@ import { BrowserRouter, Route } from "react-router-dom";
 
 import Main from "./main/Main";
 import Header from "./header/Header";
+import Contact from "./contact/Contact";
 const Docs = () => <h2>Docs!</h2>;
 const CV = () => <h2>CV!</h2>;
 const GitHub = () => <h2>GitHub!</h2>;
-const Contact = () => <h2>Contact!</h2>;
 
 class App extends Component {
   onContainerClick = () => {

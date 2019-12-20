@@ -5,22 +5,18 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-*,
-*:after,
-*:before {
-  box-sizing: inherit;
-}
-
 body {
   color: #00264d;
   padding: 0;
   margin: 0;
   height: 100%;
+  width: 100%;
 }
 
 .container {
   background-color: white;
   height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -28,6 +24,13 @@ body {
 @media (min-width: 1000px) {
   .container {
     flex-direction: row;
+  }
+
+  .container div:nth-child(2) {
+    /* background-color: red; */
+    /* border: 1px solid black; */
+    width: 100%;
+    height: auto;
   }
 }
 
