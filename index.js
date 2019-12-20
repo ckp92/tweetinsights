@@ -5,6 +5,7 @@ const morgan = require("morgan");
 const keys = require("./config/keys");
 const db = require("./config/DBConfig");
 require("./models/Data");
+require("./models/Email");
 
 // MONGOOSE CONFIG -------------------------------------------------------------------------------------------
 db.on("error", console.error.bind(console, "connection error"));
@@ -23,6 +24,9 @@ app.use(morgan("combined"));
 // ROUTES ----------------------------------------------------------------------------------------------------
 
 app.get("/api/test", (req, res) => res.send({ hello: "World!" }));
+
+// email routes
+require("./routes/emailRoutes")(app);
 
 // make express behave correctly in production environment
 if (process.env.NODE_ENV === "production") {
