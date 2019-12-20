@@ -42,7 +42,7 @@ class Contact extends Component {
       <p>
         Alternatively, send an email to{" "}
         <a
-          href="mailto:cpatel818@gmail.com?Subject=RE:%20TWITTER%20INSIGHTS"
+          href="mailto:cpatel818@gmail.com?Subject=RE:%20TWEET%20INSIGHTS"
           target="_blank"
           rel="noopener noreferrer"
         >
