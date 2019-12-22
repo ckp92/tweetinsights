@@ -2,7 +2,9 @@ import {
   TOGGLE_HAMBURGER,
   TOGGLE_FORM_REVIEW,
   SEND_EMAIL,
-  CLOSE_MODAL
+  CLOSE_MODAL,
+  SET_TYPES,
+  GET_DATA
 } from "./types";
 
 // toggle hamburger menu -------------------------------------------------------------------------------------
@@ -33,4 +35,23 @@ export const sendEmail = (formValues, history) => async dispatch => {
 // close modal -----------------------------------------------------------------------------------------------
 export const closeModal = () => {
   return { type: CLOSE_MODAL };
+};
+
+// set search types and get data -----------------------------------------------------------------------------
+export const setTypes = (type, subType, history = null) => async dispatch => {
+  const res = await fetch(`/api/data/${type}/${subType}`);
+  const data = await res.json();
+
+  dispatch({ type: SET_TYPES, payload: { type, subType, data } });
+
+  // will only be sent history if we aren't on '/'
+  if (history) history.push("/");
+};
+
+// get data --------------------------------------------------------------------------------------------------
+export const getData = (type, subType) => async dispatch => {
+  const res = await fetch(`/api/data/${type}/${subType}`);
+  const data = await res.json();
+
+  dispatch({ type: GET_DATA, payload: data });
 };

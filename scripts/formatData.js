@@ -47,7 +47,7 @@ const addToCollection = async oldData => {
       type: null,
       subType: null,
       bucket,
-      location,
+      location: location.toUpperCase(),
       start,
       end,
       searchQueries,

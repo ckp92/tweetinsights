@@ -1,7 +1,7 @@
 import "../styles/App.css";
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { toggleHamburger } from "../actions";
+import { toggleHamburger, getData } from "../actions";
 import { BrowserRouter, Route } from "react-router-dom";
 
 import Main from "./main/Main";
@@ -12,6 +12,17 @@ import GitHub from "./github/GitHub";
 const Docs = () => <h2>Docs!</h2>;
 
 class App extends Component {
+  // get initial data
+  componentDidMount = () => {
+    const {
+      searchType: { type, subType },
+      getData
+    } = this.props;
+
+    getData(type, subType);
+  };
+
+  // close hamburger menu
   onContainerClick = () => {
     const { hamburgerOn, toggleHamburger } = this.props;
 
@@ -36,8 +47,8 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = ({ hamburgerOn }) => {
-  return { hamburgerOn };
+const mapStateToProps = ({ hamburgerOn, searchType }) => {
+  return { hamburgerOn, searchType };
 };
 
-export default connect(mapStateToProps, { toggleHamburger })(App);
+export default connect(mapStateToProps, { toggleHamburger, getData })(App);

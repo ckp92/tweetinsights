@@ -1,5 +1,4 @@
 .contact-form-review {
-  /* border: 1px solid black; */
   width: 400px;
   display: flex;
   flex-direction: column;
@@ -8,7 +7,6 @@
 
 .review-fields {
   width: 100%;
-  /* border: 1px solid black; */
 }
 
 .review-field {
@@ -24,13 +22,11 @@
 }
 
 .review-field p {
-  /* border: 1px solid black; */
   height: 20px;
   margin: 0;
 }
 
 .review-buttons {
-  /* border: 1px solid black; */
   width: 100%;
   display: flex;
   justify-content: space-between;

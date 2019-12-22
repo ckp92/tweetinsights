@@ -1,17 +1,11 @@
 .shell {
-  /* border: 1px solid black; */
   margin-bottom: 20px;
   padding: 20px;
-  /* width: 100%; */
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* align-items: center; */
 }
 
 .shell-header,
 .shell-content,
 .shell-footer {
-  /* border: 1px solid black; */
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -19,19 +13,20 @@
   margin: 20px 0;
 }
 
+#main-shell .shell-footer {
+  align-items: flex-start;
+}
+
+#main-shell .shell-footer h2 {
+  align-self: center;
+}
+
 .shell-header h1 {
   margin: 0;
 }
 
-@media (min-width: 1000px) {
-  .shell {
-    /* min-width: 1000px; */
-    /* flex-grow: 2; */
-    /* align-self: stretch; */
-  }
-}
-
 @media (max-width: 640px) {
+  .shell-header,
   .shell-footer {
     text-align: center;
   }

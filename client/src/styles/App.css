@@ -27,8 +27,6 @@ body {
   }
 
   .container div:nth-child(2) {
-    /* background-color: red; */
-    /* border: 1px solid black; */
     width: 100%;
     height: auto;
   }

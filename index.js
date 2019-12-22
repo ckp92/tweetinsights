@@ -27,6 +27,8 @@ app.get("/api/test", (req, res) => res.send({ hello: "World!" }));
 
 // email routes
 require("./routes/emailRoutes")(app);
+// data routes
+require("./routes/dataRoutes")(app);
 
 // make express behave correctly in production environment
 if (process.env.NODE_ENV === "production") {
