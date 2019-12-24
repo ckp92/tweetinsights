@@ -158,6 +158,34 @@ export default [
         one of those helper packages (where you just type in your credentials
         and the search criteria) because I wanted to do it myself. I learned a
         lot during this period and I am quite confident with APIs now.
+      </div>,
+      <div className="list-item">
+        <span className="first-line">
+          Getting the same amount of data for each location.{" "}
+        </span>
+        Seeing as the study was done geographically, the locations aren't all
+        the same size and so more data will come from some places than for
+        others. London, for example, is much larger than Birmingham, so there
+        were always more tweets coming from there. The same can be said for the
+        USA compares to the UK. Because of this, the changes in activity was
+        more important than the amount of activity.
+      </div>,
+      <div className="list-item">
+        <span className="first-line">Getting reliable data.</span> Twitter
+        didn't give reliable data when the tweet counts were very low. If an
+        interval has no tweets with the specified keyword(s), it would show 0,
+        but if there were anything between 1-5 tweets, it would always show 5.
+        This made things unreliable when working with small amounts of data.
+        This was the case, for example, with some intervals in the A-Level
+        Results charts.
+      </div>,
+      <div className="list-item">
+        <span className="first-line">Getting enough data.</span> A lot of
+        searches didn't give enough results to let us make meaningful
+        conclusions, and a big cause for this is the fact that most people
+        nowadays have geolocation turned off for privacy concerns. If the study
+        didn't require comparing between locations, it wouldn't be a problem,
+        but in this case it meant less results.
       </div>
     ]
   }
