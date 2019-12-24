@@ -1,0 +1,35 @@
+.section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+}
+
+.section h2 {
+  margin: 0;
+}
+
+.section ul {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.section > ul > li {
+  list-style: circle;
+  margin: 20px 0;
+}
+
+.section ol li {
+  margin: 10px 0;
+}
+
+@media (max-width: 640px) {
+  .section {
+    align-items: center;
+    border-top: 1px solid black;
+  }
+
+  .section:last-of-type {
+    border-bottom: 1px solid black;
+  }
+}
