@@ -103,7 +103,6 @@ class BottomContent extends Component {
         <p>Misc:</p>
         <MenuButton content="GitHub" type="link" path="/github" />
         <MenuButton content="CV" type="link" path="/cv" />
-        <MenuButton content="Portfolio" type="link" path="/" />
         <MenuButton content="Contact" type="link" path="/contact" />
       </div>
     );
