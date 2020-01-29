@@ -16,7 +16,7 @@ const MenuButton = ({ id, content, type, onClick, path }) => {
           {content}
         </Link>
       );
-    } else if (type === "anchor") {
+    } else if (type === "a") {
       return (
         <a
           href={path}

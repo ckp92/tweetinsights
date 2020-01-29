@@ -101,7 +101,11 @@ class BottomContent extends Component {
           }
         />
         <p>Misc:</p>
-        <MenuButton content="GitHub" type="link" path="/github" />
+        <MenuButton
+          content="GitHub"
+          type="a"
+          path="https://github.com/ckp92/tweetinsights"
+        />
         <MenuButton content="CV" type="link" path="/cv" />
         <MenuButton content="Contact" type="link" path="/contact" />
       </div>

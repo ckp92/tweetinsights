@@ -9,7 +9,7 @@ import Header from "./header/Header";
 import Contact from "./contact/Contact";
 import Docs from "./docs/Docs";
 import CV from "./cv/CV";
-import GitHub from "./github/GitHub";
+// import GitHub from "./github/GitHub";
 
 class App extends Component {
   // get initial data
@@ -38,7 +38,7 @@ class App extends Component {
             <Route path="/" exact component={Main} />
             <Route path="/docs" exact component={Docs} />
             <Route path="/cv" exact component={CV} />
-            <Route path="/github" exact component={GitHub} />
+            {/* <Route path="/github" exact component={GitHub} /> */}
             <Route path="/contact" exact component={Contact} />
           </div>
         </BrowserRouter>
