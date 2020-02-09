@@ -6,7 +6,7 @@ export default [
     list: [
       <div className="list-item">
         <span className="first-line">
-          Tweet Insights is a webapp that graphically displays the volume of
+          Tweet Insights is a web app that graphically displays the volume of
           tweets containing specific keywords and phrases.
         </span>{" "}
         The data was obtained using the Twitter API in the summer of 2019, while
@@ -24,7 +24,7 @@ export default [
         </strong>{" "}
         The cheapest premium-tier service gives you access to volumetric data
         for all tweets made within 30 days of the API request. It cost me around
-        £120 to use it 30 days, and it is for this reason that this webapp:{" "}
+        £120 to use it 30 days, and it is for this reason that this web app:{" "}
         <ol>
           <li>Is not using more recent data</li>
           <li>
@@ -79,7 +79,7 @@ export default [
       </div>,
       <div className="list-item">The the back-end uses Nodejs and Express</div>,
       <div className="list-item">
-        This webapp uses MongoDB to store data because the data is
+        This web app uses MongoDB to store data because the data is
         non-relational.
       </div>
     ]
