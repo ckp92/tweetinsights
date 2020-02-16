@@ -1,6 +1,6 @@
 export default {
   epstein: [
-    "It's hard to tell, but if you hover over the actual points, there are spikes in the number of tweets recorded inthe UK, in accordance with major trends regarding the late, infamout Jeffery Epstein! The huge volume of tweets coming from the USA make it difficult to plot the UK on the same chart.",
+    "It's hard to tell, but if you hover over the actual points, there are spikes in the number of tweets recorded inthe UK, in accordance with major trends regarding the late, infamous Jeffery Epstein! The huge volume of tweets coming from the USA make it difficult to plot the UK on the same chart.",
     "On a similar note, the US data HAS been plotted on the graph, just it is so close to the global data, that it seems like it doesn't exist. Rest assured, if you hover over the points, you will see two sets of results - one for the USA and the other for global results.",
     "That being said, the reliability of the data does come into question here because many of the global results are the exact same as the counts for the USA."
   ],
